@@ -1,0 +1,21 @@
+{
+    "name": "haotx/translate-api",
+    "description": "Support translate text",
+    "keywords": ["PHP"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tran Xuan Hao",
+            "email": "tranxuanhao2001@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "TranslateApi\\": "src"
+        }
+    }
+}
