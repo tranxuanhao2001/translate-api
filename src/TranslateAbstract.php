@@ -38,7 +38,7 @@ abstract class TranslateAbstract
      * @return $this
      */
     public function setApiKey($apiKey) {
-        $this->$apiKey = $apiKey;
+        $this->apiKey = $apiKey;
 
         return $this;
     }
