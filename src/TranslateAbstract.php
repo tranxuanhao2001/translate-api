@@ -182,7 +182,7 @@ abstract class TranslateAbstract
     }
 
     /**
-     * Translate
+     * Translate the text
      * @param string $text
      * @param string $source
      * @param string $target
@@ -190,4 +190,19 @@ abstract class TranslateAbstract
      * @return mixed
      */
     abstract public function translate($text, $source, $target, $options = []);
+
+    /**
+     * Detact language the text
+     * @param string $text
+     * @param array $options
+     * @return mixed
+     */
+    abstract public function detect($text, $options = []);
+
+    /**
+     * Get all supported languages
+     * @param array $options
+     * @return mixed
+     */
+    abstract public function getSupportedLanguages($options = []);
 }
