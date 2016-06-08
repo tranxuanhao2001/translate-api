@@ -21,10 +21,38 @@ Usage translate Yandex
 
 Translate the text (Don't support translate multi text)
 ```php
+use TranslateApi\Translate;
+use TranslateApi\TranslateYandex;
 
+$provider = new TranslateYandex($yourKeyApi);
+
+$translate = new Translate($provider);
+$result = $translate->translate('Hello world', 'en', 'vi');
 ```
 
 
-Swagger-php
+Detect language the text
+```php
+use TranslateApi\Translate;
+use TranslateApi\TranslateYandex;
+
+$provider = new TranslateYandex($yourKeyApi);
+
+$translate = new Translate($provider);
+$result = $translate->detect('Hello world');
+```
+
+Get supported languages
+```php
+use TranslateApi\Translate;
+use TranslateApi\TranslateYandex;
+
+$provider = new TranslateYandex($yourKeyApi);
+
+$translate = new Translate($provider);
+$result = $translate->getSupportedLanguages(['ui' => 'en']);
+```
+
+Translate Yandex
 ======================
-The actual Swagger spec is beyond the scope of this package. All SwaggerLume does is package up swagger-php and swagger-ui in a Laravel-friendly fashion, and tries to make it easy to serve. For info on how to use swagger-php [look here](http://zircote.com/swagger-php/). For good examples of swagger-php in action [look here](https://github.com/zircote/swagger-php/tree/master/Examples/petstore.swagger.io).
+See more api of Yandex [look here](https://tech.yandex.com/translate/doc/dg/concepts/About-docpage/).
